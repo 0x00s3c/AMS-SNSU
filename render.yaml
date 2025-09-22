@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: ams-snsu-laravel
+    env: docker
+    plan: free
+    repo: https://github.com/0x00s3c/AMS_SNSU
+    dockerfilePath: ./Dockerfile
+    branch: master
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: APP_KEY
+        value: base64:FoxLydA0IpuliFk7YpxWb2Eqzr6VFWyY6cyq6rBxWUo=
+      - key: APP_DEBUG
+        value: false
+      - key: APP_URL
+        value: https://ams-snsu.onrender.com
+      - key: DB_CONNECTION
+        value: mysql
+      - key: DB_HOST
+        value: your-db-host
+      - key: DB_PORT
+        value: 3306
+      - key: DB_DATABASE
+        value: ams_snsu
+      - key: DB_USERNAME
+        value: your-db-user
+      - key: DB_PASSWORD
+        value: your-db-password
